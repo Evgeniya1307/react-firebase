@@ -34,7 +34,8 @@ const Login = () => {
   return (
     <div className="login">
       <form onSubmit={handleLogin}>
-        <input
+        {/*2 ввода email и пароль */}
+      <input
           type="email"
           placeholder="email"
           onChange={(e) => setEmail(e.target.value)}
