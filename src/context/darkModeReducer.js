@@ -1,4 +1,5 @@
 const DarkModeReducer = (state, action) => {
+  //три действия светлый тёмный или переключения 
   switch (action.type) {
     case "LIGHT": {
       return {
@@ -12,7 +13,7 @@ const DarkModeReducer = (state, action) => {
     }
     case "TOGGLE": {
       return {
-        darkMode: !state.darkMode,
+        darkMode: !state.darkMode, //вернёт противоположность тёмному режиму
       };
     }
     default:
