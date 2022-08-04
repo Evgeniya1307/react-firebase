@@ -17,8 +17,8 @@ const Login = () => {
 
   const {dispatch} = useContext(AuthContext)
 //метод на отправку для входа в систему примет событие используя базу 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (e) => { 
+    e.preventDefault(); //событие предотвращения по умолчанию при нажатие не было обновления
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
