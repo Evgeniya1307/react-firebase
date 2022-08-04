@@ -1,7 +1,7 @@
 .login{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    height: 100vh;//полная высота 
+    display: flex; 
+    align-items: center;//центрировать всё 
     justify-content: center;
 
     form{
@@ -12,23 +12,23 @@
       input{
         width: 200px;
         height: 30px;
-        margin: 10px;
+        margin: 10px;//запас между ними
       }
 
       button{
         width: 200px;
         height: 30px;
-        border: none;
+        border: none;//нет границы
         background-color: purple;
         color: white;
         font-weight: bold;
-        cursor: pointer;
+        cursor: pointer;//указатель курсора
       }
 
       span{
-        font-size: 12px;
+        font-size: 12px;//размер шрифта
         color: red;
-        margin-top: 10px;
+        margin-top: 10px; //поле сверху
       }
     }
 }

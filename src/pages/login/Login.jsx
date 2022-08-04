@@ -8,14 +8,15 @@ import {AuthContext} from "../../context/AuthContext"
 
 //страница входа
 const Login = () => {
-  const [error, setError] = useState(false);
+  //состояние ошибка 
+  const [error, setError] = useState(false);//вначале ложно не увижу ошибки
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navitage = useNavigate()
 
   const {dispatch} = useContext(AuthContext)
-
+//метод на отправку для входа в систему примет событие используя базу 
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -33,7 +34,7 @@ const Login = () => {
 
   return (
     <div className="login">
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin}>{/*метод при отправке обр-ть вход в систему   */}
         {/*2 ввода email и пароль */}
       <input
           type="email"
@@ -45,8 +46,8 @@ const Login = () => {
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
-        {error && <span>Wrong email or password!</span>}
+        <button type="submit">Login</button>{/*тип будет отправлен и сохранить */}
+        {error && <span>Неправильный адрес электронной почты или пароль</span>}{/*если есть ошибка покажи этот диапазон,в этом случае ложь   */}
       </form>
     </div>
   );
