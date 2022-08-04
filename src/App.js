@@ -16,6 +16,7 @@ function App() {
   //создала пользователя
   const {currentUser} = useContext(AuthContext)
 
+  //защита маршрутов передаю компоненты и условие верните если есть текущий пользователь перейдите к children если нет пользователя просто перейдите на страницу вхожа в систему использую компонент навигации
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
   };
