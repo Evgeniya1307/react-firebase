@@ -13,22 +13,23 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const navitage = useNavigate()
+  const navitage = useNavigate() //перенаправление пользователей на другую страницу
 
   const {dispatch} = useContext(AuthContext)
 //метод на отправку для входа в систему примет событие используя базу 
   const handleLogin = (e) => { 
     e.preventDefault(); //событие предотвращения по умолчанию при нажатие не было обновления
 
+    //входить в систему
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
+        // Вошел
         const user = userCredential.user;
         dispatch({type:"LOGIN", payload:user})
-        navitage("/")
+        navitage("/")//перейти
       })
       .catch((error) => {
-        setError(true);
+        setError(true);//установить ошибку
       });
   };
 

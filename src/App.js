@@ -13,6 +13,7 @@ import { AuthContext } from "./context/AuthContext";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
+  //создала пользователя
   const {currentUser} = useContext(AuthContext)
 
   const RequireAuth = ({ children }) => {
